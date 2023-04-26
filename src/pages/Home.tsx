@@ -1,5 +1,5 @@
 import { CategoriesFood, FavoriteFood } from "../components";
-import { HeroSection } from "../layout";
+import { BlogSection, HeroSection } from "../layout";
 
 const Homepage = () => {
   return (
@@ -7,6 +7,8 @@ const Homepage = () => {
       <HeroSection />
       <CategoriesFood />
       <FavoriteFood />
+
+      <BlogSection />
     </>
   );
 };

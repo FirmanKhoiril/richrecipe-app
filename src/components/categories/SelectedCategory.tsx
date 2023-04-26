@@ -16,7 +16,7 @@ const SelectedCategory = () => {
 
   const { data, isFetching, isLoading, isError, hasNextPage, error, fetchNextPage, isSuccess, isFetchingNextPage } = useInfiniteQuery(["selectedCategory", allCategories], dataRecipe, {
     getNextPageParam: (lastPage, pages) => {
-      console.log(lastPage?.criteria?.start);
+      if (lastPage?.criteria?.start) return lastPage?.criteria?.start + 1;
       return lastPage?.criteria?.start + 1;
     },
     staleTime: 10 * (60 * 1000),

@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
-import Background from "../assets/image/tests.jpg";
+import Background from "../../assets/image/tests.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { CTypography } from "../components";
+import { CTypography } from "../../components";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../context/ContextAPI";
+import { useGlobalContext } from "../../context/ContextAPI";
 const HeroSection = () => {
   const { setCategoriesLinks }: any = useGlobalContext();
 

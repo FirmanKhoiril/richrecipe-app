@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Homepage, DetailFood, SearchResult, Category, About, Blog } from "./pages";
+import { Home, DetailFood, SearchResult, Category, About, Blog } from "./pages";
 import { Container } from "@mui/material";
 import { useEffect } from "react";
 import { BlackScreen, Navbar } from "./components";
@@ -27,7 +27,7 @@ function App() {
             </>
           )}
           <Routes>
-            <Route index path="/" element={<Homepage />} />
+            <Route index path="/" element={<Home />} />
             <Route path="/category" element={<Category />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
