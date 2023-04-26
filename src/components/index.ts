@@ -11,3 +11,4 @@ export { default as CardCategories } from "./categories/CardCategories";
 export { default as RecipeFood } from "./RecipeFood";
 export { default as ButtonFetchPages } from "./ButtonFetchPages";
 export { default as Error } from "./features/Error";
+export { default as BlogCard } from "./BlogCard";

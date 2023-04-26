@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const CardCategories = ({ recipe }: IResult) => {
   return (
-    <Box sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }} className=" hover:scale-[1.02] transition duration-300">
+    <Box sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }} className=" hover:scale-[1.02] dark:bg-white/5 rounded-t-lg bg-black/5 hover:shadow-[0px_2px_3px_1px] transition duration-300">
       <Link to={`/recipe/${recipe?.content?.details?.id}`}>
         {recipe?.content?.details?.images.map((item: ImageFood, idx: number) => (
           <Box key={idx} sx={{ width: 275, height: 350, p: 1 }}>

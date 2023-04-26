@@ -120,9 +120,4 @@ export const links = [
     name: "blog",
     to: "/blog",
   },
-
-  {
-    name: "about",
-    to: "/about",
-  },
 ];

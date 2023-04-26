@@ -14,6 +14,43 @@ export type IUser = {
   siteUrl: string;
 };
 
+export type TnewsImage = {
+  name: string;
+  image: {
+    thumbnail: {
+      contentUrl: string;
+    };
+  };
+};
+export type TNews = {
+  _type: string;
+  datePublished: string;
+  description: string;
+  image: {
+    thumbnail: {
+      contentUrl: string;
+    };
+  };
+  name: string;
+  url: string;
+  provider: [];
+};
+export interface INews {
+  detail: {
+    _type: string;
+    datePublished: string;
+    description: string;
+    image: {
+      thumbnail: {
+        contentUrl: string;
+      };
+    };
+    name: string;
+    url: string;
+    provider: [];
+  };
+}
+
 export type IButton = {
   onClick: () => void;
 };

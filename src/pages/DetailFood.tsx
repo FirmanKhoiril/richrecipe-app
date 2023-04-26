@@ -22,16 +22,20 @@ const DetailFood = () => {
 
   return (
     <>
-      {isFetching && isLoading && <Loading />}
-      {isError && <Error error={error} />}
-      {isSuccess && (
-        <Box>
-          {data?.feed?.map((recipe: any, idx: number) => (
-            <Box key={idx}>
-              <RecipeFood recipe={recipe} />
-            </Box>
-          ))}
-        </Box>
+      {isFetching && isLoading ? (
+        <Loading />
+      ) : isError ? (
+        <Error error={error} />
+      ) : (
+        isSuccess && (
+          <Box>
+            {data?.feed?.map((recipe: any, idx: number) => (
+              <Box key={idx}>
+                <RecipeFood recipe={recipe} />
+              </Box>
+            ))}
+          </Box>
+        )
       )}
     </>
   );

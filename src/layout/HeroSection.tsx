@@ -1,10 +1,12 @@
 import { Box } from "@mui/material";
-import React from "react";
 import Background from "../assets/image/tests.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { CTypography } from "../components";
-
+import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context/ContextAPI";
 const HeroSection = () => {
+  const { setCategoriesLinks }: any = useGlobalContext();
+
   return (
     <Box sx={{ position: "relative" }}>
       <LazyLoadImage src={Background} className="w-full sm:px-1 rounded-lg cursor-auto h-[400px] brightness-[0.6]" />
@@ -17,7 +19,7 @@ const HeroSection = () => {
         />
       </Box>
 
-      <Box sx={{ position: { sm: "absolute", xs: "static" }, mt: { xs: 4, sm: 0 }, top: 230, left: 40, display: "flex", gap: 4 }}>
+      <Box sx={{ position: { sm: "absolute", xs: "static" }, my: { xs: 4, sm: 0 }, top: 225, left: 40, display: "flex", gap: 4 }}>
         <Box>
           <CTypography desc="300k+" className="hero__section__rate" />
           <CTypography desc="Recipe" className="hero__section__text" />
@@ -31,6 +33,13 @@ const HeroSection = () => {
           <CTypography desc="Features" className="hero__section__text" />
         </Box>
       </Box>
+      <Link
+        to="/category"
+        onClick={() => setCategoriesLinks("category")}
+        className="py-3 px-4 bg-lime-500 mt-20 hover:shadow-[0px_2px_3px_1px] dark:text-black  sm:absolute static top-[230px] rounded-md tracking-wider hover:bg-lime-400 left-[40px]  font-bold"
+      >
+        Let's Explore
+      </Link>
     </Box>
   );
 };

@@ -6,11 +6,12 @@ import { CTypography } from "./";
 import { useNavigate } from "react-router-dom";
 
 const CategoriesFood = () => {
-  const { setCategories, categories }: any = useGlobalContext();
+  const { setCategories, categories, setCategoriesLinks }: any = useGlobalContext();
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/category");
+    setCategoriesLinks("category");
   };
   return (
     <Box sx={{ height: 100, display: "flex", gap: 2, my: 5, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
