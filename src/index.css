@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero__section__text {
+  @apply text-black/60 sm:text-slate-300 text-lg dark:text-white/60;
+}
+
+.hero__section__rate {
+  @apply text-lime-500 text-3xl;
+}
+
+.error__text {
+  @apply text-red-500;
+}
+.dark {
+  @apply text-white;
+}
