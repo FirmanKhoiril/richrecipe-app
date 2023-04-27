@@ -27,7 +27,7 @@ const Blog = () => {
       ) : (
         isSuccess && (
           <Box sx={{ mt: { xs: 4, sm: 8 } }}>
-            <CTypography className="text-[45px] capitalize font-bold" desc={"News Blogs " + data?.queryContext?.originalQuery} />
+            <CTypography className="text-[45px]  tracking-wide capitalize font-bold" desc={"Latest " + data?.queryContext?.originalQuery + " Blogs"} />
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4, my: 4 }}>
               {data?.value?.map((news: TNews, idx: number) => (
                 <BlogCard key={idx} detail={news} />
