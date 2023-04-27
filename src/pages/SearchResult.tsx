@@ -7,6 +7,7 @@ import { TPagination } from "../utils/TypeData";
 
 const SearchResult = () => {
   const { text } = useParams<string>();
+
   const dataRecipe = async ({ pageParams = 1 }: any) => {
     const res = await getRecipe(`feeds/search?start=${pageParams}&maxResult=20&maxTotalTimeInSecond=7200&q=${text}&FAT_KCALMax=1000`);
     return res;

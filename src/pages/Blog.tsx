@@ -1,4 +1,3 @@
-import React from "react";
 import { useQuery } from "react-query";
 import { getNewsRecipe } from "../api/fetchRecipeNews";
 import { Box } from "@mui/material";
@@ -7,7 +6,7 @@ import { TNews } from "../utils/TypeData";
 
 const Blog = () => {
   const dataNews = async () => {
-    const res = await getNewsRecipe("news/search?q=recipe&safeSearch=Off&textFormat=Raw&freshness=Day&count=28");
+    const res = await getNewsRecipe("news/search?q=recipe&safeSearch=Off&textFormat=Raw&freshness=Day&count=40");
     return res;
   };
 
@@ -19,7 +18,6 @@ const Blog = () => {
     refetchOnWindowFocus: false,
   });
 
-  console.log(data);
   return (
     <>
       {isFetching && isLoading ? (
