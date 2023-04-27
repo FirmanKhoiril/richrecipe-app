@@ -29,9 +29,9 @@ const BlogSection = () => {
         <Error error={error} />
       ) : (
         isSuccess && (
-          <Box sx={{ mt: { xs: 4, sm: 8 } }}>
+          <Box sx={{ my: { xs: 5, sm: 8 } }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <CTypography className="text-[45px] capitalize font-bold" desc={"Top 10 Blogs " + data?.queryContext?.originalQuery} />
+              <CTypography className=" text-[30px] sm:text-[45px] capitalize font-bold" desc={"Top 10 Blogs " + data?.queryContext?.originalQuery} />
               <Link
                 to="/blog"
                 onClick={() => setCategoriesLinks("blog")}
