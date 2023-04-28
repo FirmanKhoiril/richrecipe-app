@@ -34,8 +34,8 @@ function App() {
             <Route path="/recipe/:id" element={<DetailFood />} />
             <Route path="/search/:text" element={<SearchResult />} />
           </Routes>
-          <Footer />
         </Container>
+        <Footer />
       </div>
     </div>
   );

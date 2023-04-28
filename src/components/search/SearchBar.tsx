@@ -23,7 +23,7 @@ const SearchBar = () => {
         required
         onChange={handleChange}
         placeholder="Search for foods"
-        className=" h-10 py-2 w-60  md:w-80 bg-black/5 focus:bg-white dark:focus:bg-black/20 flex dark:bg-black/60 ml-1 px-4 outline-none focus:border border-lime-600 peer"
+        className=" h-10 py-2 w-60  md:w-80 bg-black/5 focus:bg-white dark:focus:bg-black/20 flex dark:bg-black/30 ml-1 px-4 outline-none focus:border border-lime-600 peer"
       />
       <button type="submit" className="p-[10px] bg-lime-500 placeholder:text-slate-800 hover:bg-lime-600 cursor-pointer rounded-r-full peer-focus:text-white">
         <AiOutlineSearch className="text-xl " />
