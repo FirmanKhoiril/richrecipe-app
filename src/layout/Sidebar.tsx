@@ -2,8 +2,6 @@ import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { useGlobalContext } from "../context/ContextAPI";
-import Logo from "../assets/image/test.jpg";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { CTypography } from "../components";
 import { Link } from "react-router-dom";
 import SearchBar from "../components/search/SearchBar";
@@ -25,7 +23,7 @@ const Sidebar = () => {
         <AiOutlineClose className="text-2xl cursor-pointer" />
       </Box>
       <Link to="/" className="flex items-center justify-center">
-        {dark ? <TbChefHat className=" text-white/90 text-3xl " /> : <LazyLoadImage effect="blur" src={Logo} alt="Logo RRecipe" className="w-12 h-12" />}
+        <TbChefHat className="text-2xl text-black/80 dark:text-white/80 mx-1 md:mx-2" />{" "}
         <CTypography variant="h5" desc="RichRecipe" descThree="RRecipe" className="tracking-widest sm:block hidden text-lime-600 font-extralight" classNameTwo="tracking-wider block sm:hidden text-lime-600 font-bold" />
       </Link>
 
