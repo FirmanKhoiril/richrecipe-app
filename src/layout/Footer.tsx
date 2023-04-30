@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 import React, { RefObject, useRef } from "react";
 
 const Footer = () => {
-  const { categoriesLinks, setForm, form, setCategoriesLinks }: any = useGlobalContext();
+  const { categoriesLinks, loading, setLoading, setForm, form, setCategoriesLinks }: any = useGlobalContext();
 
   const formRef: any = useRef();
   const handleChange = (e: any) => {
@@ -18,6 +18,7 @@ const Footer = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .send(
@@ -35,10 +36,12 @@ const Footer = () => {
       .then(
         () => {
           alert(`Thanky you ${form.name}. we will back for you as soon as possible `);
+          setLoading(false);
           setForm({ ...form, message: "", name: "", email: "" });
         },
         (err) => {
           alert(`${err.text}`);
+          setLoading(false);
         }
       );
   };
@@ -82,7 +85,7 @@ const Footer = () => {
           rows={4}
           className="bg-black/40 focus:bg-white placeholder-white/50 px-4 focus:placeholder:text-white/60 dark:focus:bg-black/20 flex dark:bg-black/30 outline-none focus:border border-lime-600"
         />
-        <button type="submit">Submit</button>
+        <button type="submit">{loading ? "Sending..." : "Send"}</button>
       </form>
     </Box>
   );
