@@ -80,7 +80,7 @@ const Footer = () => {
           onChange={handleChange}
           name="message"
           rows={4}
-          className="g-black/40 focus:bg-white placeholder-white/50 focus:placeholder:text-black/60 dark:focus:bg-black/20 flex dark:bg-black/30 outline-none focus:border border-lime-600"
+          className="bg-black/40 focus:bg-white placeholder-white/50 px-4 focus:placeholder:text-white/60 dark:focus:bg-black/20 flex dark:bg-black/30 outline-none focus:border border-lime-600"
         />
         <button type="submit">Submit</button>
       </form>
