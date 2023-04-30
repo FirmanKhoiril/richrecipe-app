@@ -11,10 +11,6 @@ const Footer = () => {
   const { categoriesLinks, setForm, form, setCategoriesLinks }: any = useGlobalContext();
 
   const formRef: any = useRef();
-
-  // template_pel69iv
-  // service_yz8oavm
-
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -49,7 +45,7 @@ const Footer = () => {
   return (
     <Box sx={{ py: 6, display: "flex", flexDirection: { xs: "column", sm: "row" }, px: { xs: 4, sm: 0 }, justifyContent: "space-around", alignItems: { xs: "start", sm: "center" }, gap: 2 }} className=" bg-slate-100/80 dark:bg-zinc-800">
       <Box sx={{ display: "flex", gap: 2, flexDirection: "column" }}>
-        <CTypography className=" text-sm text-slate-600 dark:text-slate-400" desc="@Copyright 2023. RichRecipe" />
+        <CTypography className=" text-sm text-slate-600 dark:text-slate-400" desc="@Copyright 2023. FirmanKhoiril." />
         {links.map((link: TLinks, idx: number) => (
           <Link key={idx} to={link.to} onClick={() => setCategoriesLinks(link.name)} className={`capitalize tracking-wider hover:text-lime-600 ${link.name === categoriesLinks ? "text-lime-600" : " dark:text-white"}`}>
             {link.name}
@@ -61,7 +57,6 @@ const Footer = () => {
           <CTypography desc="Get new recipes everyday !" className=" text-xl text-lime-500 tracking-wide" />
           <CTypography desc="Just with send a email." className=" text-xl text-lime-500 tracking-wide" />
         </Box>
-
         <input
           type="text"
           placeholder="Your name"
